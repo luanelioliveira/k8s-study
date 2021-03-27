@@ -43,24 +43,24 @@ This project was developed as part of my study
 
 ## :desktop_computer: How to use
 
-- Start your minikube: ```minikube start --driver=hyperkit```
-- Get ip minukube: ```minikube ip```
 - Clone it: ```git clone https://github.com/luanelioliveira/k8s-study.git```
 - Enter in the project:  ```cd k8s-study```
+- Start your minikube: ```minikube start --driver=hyperkit```
+- Get ip minukube: ```minikube ip```
 
-Run commands to dev: 
+Deploy to dev: 
 ```bash 
 $ kubectl create -f samples/environments/dev/namespace.yaml --save-config --record
 $ kubectl create -f samples/environments/dev --save-config --record
 ```
 
-Run commands to sandbox: 
+Deploy to sandbox: 
 ```bash 
 $ kubectl create -f samples/environments/sandbox/namespace.yaml --save-config --record
 $ kubectl create -f samples/environments/sandbox --save-config --record
 ```
 
-Run commands to prod: 
+Deploy to prod: 
 ```bash 
 $ kubectl create -f samples/environments/prod/namespace.yaml --save-config --record
 $ kubectl create -f samples/environments/prod --save-config --record
