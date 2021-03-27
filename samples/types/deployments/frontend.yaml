@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-dp
+  labels:
+    app: frontend-app
+    type: frontend
+spec:
+  template:
+    metadata:
+      name: frontend-pod
+      labels:
+        app: frontend-app
+        type: frontend
+        env: production
+    spec:
+      containers:
+        - name: frontend-container
+          image: nginx
+          env:
+            - name: ENVIRONMENT_VARIABLE_NAME
+              value: environment-variable-value
+              
+  selector:
+    matchLabels:
+      env: production          
+  replicas: 3    
+  strategy:
+    type: RollingUpdate  
