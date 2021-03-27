@@ -46,7 +46,6 @@ This project was developed as part of my study
 - Clone it: ```git clone https://github.com/luanelioliveira/k8s-study.git```
 - Enter in the project:  ```cd k8s-study```
 - Start your minikube: ```minikube start --driver=hyperkit```
-- Get ip minukube: ```minikube ip```
 
 Deploy to dev: 
 ```bash 
@@ -66,8 +65,9 @@ $ kubectl create -f samples/environments/prod/namespace.yaml --save-config --rec
 $ kubectl create -f samples/environments/prod --save-config --record
 ```
 
-- Then open http://ip-address:30701/ to see your app.
-- Connect postgres database http://ip-address:30700/ with database `postgres`, user `postgres` and password `postgres`
+- Get ip minukube: ```minikube ip```
+- Then open http://cluster-ip:30701/ to see your app.
+- Connect postgres database http://cluster-ip:30700/ with database `postgres`, user `postgres` and password `postgres`
 
 ## 🤔 How to contribute
 
